@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".Signup">
+
+    <RadioButton
+        android:id="@+id/radiobutton2"
+        android:layout_width="175dp"
+        android:layout_height="56dp"
+        android:text="Parents"
+        android:textColorHint="@color/white"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="645dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageview1"
+        android:layout_width="206dp"
+        android:layout_height="182dp"
+        android:layout_marginBottom="72dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/etFname"
+        app:srcCompat="@drawable/logo1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="102dp" />
+
+    <EditText
+        android:id="@+id/etFname"
+        android:layout_width="324dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="24dp"
+        android:textColorHint="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="First Name"
+        app:layout_constraintBottom_toTopOf="@+id/etSname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etSname"
+        android:layout_width="324dp"
+        android:layout_height="47dp"
+        android:hint="Second Name"
+        android:layout_marginBottom="28dp"
+        android:textColorHint="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etUname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etUname"
+        android:layout_width="324dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
+        android:hint="Username"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="416dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="324dp"
+        android:layout_height="47dp"
+        android:textColorHint="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Password"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="496dp"
+        tools:ignore="MissingConstraints" />
+
+    <RadioButton
+        android:id="@+id/radiobutton1"
+        android:layout_width="175dp"
+        android:textColorHint="@color/white"
+        android:layout_height="56dp"
+        android:text="Faculty"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="580dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="109dp"
+        android:layout_height="50dp"
+        android:text="SignUp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:backgroundTint="#751F1F"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="609dp" />/>
+</androidx.constraintlayout.widget.ConstraintLayout>
