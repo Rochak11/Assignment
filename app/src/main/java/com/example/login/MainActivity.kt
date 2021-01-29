@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         btn2=findViewById(R.id.btn2)
 
         btn2.setOnClickListener {
-            saveSharedPref()
+            getSharedPref()
 
             val intent = Intent(this, Signup::class.java)
             intent.putExtra()
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-    private fun saveSharedPref() {
+    private fun getSharedPref() {
         val sharedPref = getSharedPreferences("MyPref", MODE_PRIVATE)
         val username = sharedPref.getString("username", "")
         val password = sharedPref.getString("password", "")

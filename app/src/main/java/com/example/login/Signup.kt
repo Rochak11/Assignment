@@ -28,25 +28,7 @@ class Signup : AppCompatActivity() {
         radiobutton2 = findViewById(R.id.radiobutton2)
         btn3 = findViewById(R.id.btn3)
 
-        btn3.setOnClickListener {
 
-            getSharedPref()
-
-
-        }
-    }
-
-    private fun getSharedPref() {
-        val sharedPref = getSharedPreferences("MyPref", MODE_PRIVATE)
-        val username = sharedPref.getString("username", "")
-        val password = sharedPref.getString("password", "")
-        Toast.makeText(
-                this,
-                "Username : $username and password : $password",
-                Toast.LENGTH_SHORT
-        )
-                .show()
-        TODO("Not yet implemented")
     }
 }
 
