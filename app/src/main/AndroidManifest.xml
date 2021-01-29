@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Login">
-
+        <activity android:name=".PermissionActivity"></activity>
         <activity android:name=".Signup" />
         <activity android:name=".MainActivity">
             <intent-filter>
