@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +32,15 @@ class MainActivity : AppCompatActivity() {
         }
 
     private fun saveSharedPref() {
+        val sharedPref = getSharedPreferences("MyPref", MODE_PRIVATE)
+        val username = sharedPref.getString("username", "")
+        val password = sharedPref.getString("password", "")
+        Toast.makeText(
+                this,
+                "Username : $username and password : $password",
+                Toast.LENGTH_SHORT
+        )
+                .show()
         TODO("Not yet implemented")
     }
 
