@@ -24,20 +24,20 @@
         android:layout_height="182dp"
         android:layout_marginBottom="72dp"
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/etFname"
+        app:layout_constraintBottom_toTopOf="@+id/Fname"
         app:srcCompat="@drawable/logo1"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="102dp" />
 
     <EditText
-        android:id="@+id/etFname"
+        android:id="@+id/Fname"
         android:layout_width="324dp"
         android:layout_height="47dp"
         android:layout_marginBottom="24dp"
-        android:textColorHint="@color/white"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="First Name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/etSname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
@@ -101,5 +101,5 @@
         app:backgroundTint="#751F1F"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="609dp" />/>
+        tools:layout_editor_absoluteY="609dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
