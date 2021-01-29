@@ -58,7 +58,11 @@
         android:textColor="@color/white"
         app:backgroundTint="#751F1F" />
 
-
+    <Button
+        android:id="@+id/btnGetValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get data from shared pref" />
 
 
 </LinearLayout>

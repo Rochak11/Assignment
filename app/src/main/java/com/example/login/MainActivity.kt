@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var et2: EditText
     private lateinit var btn1: Button
     private lateinit var btn2: Button
+    private lateinit var btnGetValue: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,14 +22,19 @@ class MainActivity : AppCompatActivity() {
         et2 = findViewById(R.id.et2)
         btn1=findViewById(R.id.btn1)
         btn2=findViewById(R.id.btn2)
+        btnGetValue=findViewById(R.id.  btnGetValue)
 
         btn2.setOnClickListener {
-            getSharedPref()
+
 
             val intent = Intent(this, Signup::class.java)
             intent.putExtra()
             startActivity(intent)
             }
+        btnGetValue.setOnClickListener {
+
+            getSharedPref()
+        }
         }
 
     private fun getSharedPref() {
@@ -50,6 +56,4 @@ private fun Intent.putExtra() {
     TODO("Not yet implemented")
 }
 
-object textToPass {
 
-}
