@@ -28,6 +28,12 @@ class Signup : AppCompatActivity() {
         radiobutton2 = findViewById(R.id.radiobutton2)
         btn3 = findViewById(R.id.btn3)
 
+        btn3.setOnClickListener {
+
+            getSharedPref()
+
 
         }
     }
+}
+
