@@ -22,13 +22,19 @@ class MainActivity : AppCompatActivity() {
         btn2=findViewById(R.id.btn2)
 
         btn2.setOnClickListener {
+            saveSharedPref()
+
             val intent = Intent(this, Signup::class.java)
             intent.putExtra()
             startActivity(intent)
             }
         }
 
+    private fun saveSharedPref() {
+        TODO("Not yet implemented")
     }
+
+}
 
 private fun Intent.putExtra() {
     TODO("Not yet implemented")
