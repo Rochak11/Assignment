@@ -35,5 +35,18 @@ class Signup : AppCompatActivity() {
 
         }
     }
+
+    private fun getSharedPref() {
+        val sharedPref = getSharedPreferences("MyPref", MODE_PRIVATE)
+        val username = sharedPref.getString("username", "")
+        val password = sharedPref.getString("password", "")
+        Toast.makeText(
+                this,
+                "Username : $username and password : $password",
+                Toast.LENGTH_SHORT
+        )
+                .show()
+        TODO("Not yet implemented")
+    }
 }
 
