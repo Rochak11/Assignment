@@ -4,8 +4,8 @@ package com.example.schoolapp.Repository
 import com.API.MyAPiRequest
 import com.API.UserAPI
 import com.example.schoolapp.API.ServiceBuilder
-import com.kiran.student.entity.User
-import com.kiran.student.response.LoginResponse
+import com.example.schoolapp.data.LoginResponse
+import com.example.schoolapp.data.User
 
 class UserRepository :
         MyAPiRequest() {
@@ -22,7 +22,6 @@ class UserRepository :
     suspend fun loginUser(username: String, password: String): LoginResponse {
         return apiRequest {
             userAPI.checkUser(username, password)
-
         }
     }
 }

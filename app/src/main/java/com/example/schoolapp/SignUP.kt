@@ -1,11 +1,14 @@
 package com.example.schoolapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.RadioButton
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import com.example.schoolapp.Repository.UserRepository
+import com.example.schoolapp.data.User
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SignUP : AppCompatActivity() {
     private lateinit var imageView1: ImageView
@@ -20,14 +23,48 @@ class SignUP : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_u_p)
 
-    imageView1=findViewById(R.id.imageView1)
-    etFirstName=findViewById(R.id.etFirstName)
-    etSecondName=findViewById(R.id.etSecondName)
-    etUsername1=findViewById(R.id.etUsername1)
-    etPassword1=findViewById(R.id.etPassword1)
-    rb1=findViewById(R.id.rb1)
-    rb2=findViewById(R.id.rb2)
-    btnsignup=findViewById(R.id.btnsignup)
+        imageView1 = findViewById(R.id.imageView1)
+        etFirstName = findViewById(R.id.etFirstName)
+        etSecondName = findViewById(R.id.etSecondName)
+        etUsername1 = findViewById(R.id.etUsername1)
+        etPassword1 = findViewById(R.id.etPassword1)
+        rb1 = findViewById(R.id.rb1)
+        rb2 = findViewById(R.id.rb2)
+        btnsignup = findViewById(R.id.btnsignup)
 
+        btnsignup.setOnClickListener({ signUpUser() })
+    }
+
+    private fun signUpUser() {
+        val fname = etFirstName.text.toString().trim()
+        val lname = etSecondName.text.toString().trim()
+        val username = etUsername1.text.toString().trim()
+        val password = etPassword1.text.toString().trim()
+
+        val user = User(fname, lname, username, password)
+
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val repository = UserRepository()
+                val response = repository.registerUser(user)
+                if (response.success) {
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(
+                            this@SignUP,
+                            "Sign up success", Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    finish()
+                }
+
+            } catch (ex: Exception) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(
+                        this@SignUP,
+                        ex.message, Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+        }
     }
 }
