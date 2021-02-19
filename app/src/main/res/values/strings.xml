@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">School App</string>
+
+    <string name="btn1">login</string>
+    <string name="btn2">signup</string>
+    <string name="btnsignup">signup</string>
+
+
+</resources>
